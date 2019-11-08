@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  justify-content: stretch;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  --bg-color: #eaeaea;
+}
+
+navigation {
+  flex: 0;
+  height: 100vh;
+}
+
+.scroll {
+  flex: 1 1 auto;
+  height: 100vh;
+  overflow: auto;
+  box-sizing: border-box;
+  ::ng-deep router-outlet + * {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+  }
+}
+
+

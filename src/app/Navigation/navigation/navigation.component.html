@@ -1,0 +1,13 @@
+<div id="navigation" [class.mini]="mini">
+  <img id="portrait" class="show-mini" alt="Will Pritchard's Portrait" src="assets/images/me.jpeg" />
+  <div id="badge">
+    <div class="name">Will Pritchard</div>
+    <div class="title">Full-Stack Developer</div>
+  </div>
+  <div id="links" class="show-mini">
+    <a class="link" [routerLink]="link.link" routerLinkActive="active" *ngFor="let link of links"><icon [i]="link.icon"></icon><span>{{ link.name }}</span></a>
+  </div>
+  <div id="expand" class="show-mini" (click)="mini = !mini" [class.r]="mini">
+    <icon i="expand_more"></icon>
+  </div>
+</div>

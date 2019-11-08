@@ -1,0 +1,18 @@
+:host {
+  box-sizing: border-box;
+  --padding: 40px;
+  background: var(--bg-color);
+
+  overflow: hidden;
+}
+
+.title {
+  box-sizing: border-box;
+  font-size: 35px;
+  padding: var(--padding) var(--padding) 10px;
+}
+
+.sub-title {
+  padding: 0 var(--padding) var(--padding);
+}
+

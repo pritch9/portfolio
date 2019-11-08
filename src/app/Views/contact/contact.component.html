@@ -1,0 +1,26 @@
+<div class="top">
+</div>
+<div class="vr"></div>
+<div class="bottom">
+  <div class="left">
+    <div class="title">Shoot me an email</div>
+    <form [formGroup]="contactGroup">
+      <label>Name:
+        <input formControlName="name" placeholder="Name"/>
+      </label>
+      <label>Email:
+        <input formControlName="email" placeholder="Email"/>
+      </label>
+      <label>Message:
+        <textarea formControlName="body" placeholder="What would you like to say?"></textarea>
+      </label>
+      <button>Send <icon i="send"></icon></button>
+    </form>
+  </div>
+  <div class="right">
+    <a class="contact" [href]="contact.link" *ngFor="let contact of contactMethods">
+      <img [src]="contact.img" [alt]="contact.name"/>
+      <div class="name">{{ contact.name }}</div>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="date">
+  <div *ngIf="multipleDates">{{ model.year[0].getFullYear() }} - {{ model.year[1].getFullYear() }}</div>
+  <div *ngIf="!multipleDates">{{ model.year[0].getFullYear()  }}</div>
+</div>
+<div class="vr"></div>
+<div class="title">{{ model.name }}</div>
+<div class="info">
+  <div class="liner">{{ model.liner }}</div>
+  <markdown class="desc" ngPreserveWhitespaces>
+    {{ model.description }}
+    <a class="link" *ngIf="model.link" [href]="model.link">Read More</a>
+  </markdown>
+  <div class="tech">
+    <div class="tag" *ngFor="let technology of model.technology">{{ technology }}</div>
+  </div>
+</div>
+<div class="preview">
+  <img [src]="model.img.url" [alt]="model.img.alt">
+</div>
+<div class="vr"></div>
+<div class="hr"></div>
